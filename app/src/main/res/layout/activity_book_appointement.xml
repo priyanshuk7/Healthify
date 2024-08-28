@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".pages.BookAppointement">
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="120dp"
+        android:text="Book appointment"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.515"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editTextFullname"
+        android:layout_width="280dp"
+        android:layout_height="43dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/input_bg"
+        android:drawableLeft="@drawable/ic_baseline_person_24"
+        android:drawablePadding="5dp"
+        android:ems="10"
+        android:hint="Full Name"
+        android:inputType="text"
+        android:padding="10dp"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        app:layout_constraintEnd_toEndOf="@+id/textView2"
+        app:layout_constraintStart_toStartOf="@+id/textView2"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+    <EditText
+        android:id="@+id/editTextAddress"
+        android:layout_width="280dp"
+        android:layout_height="43dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/input_bg"
+        android:drawableLeft="@drawable/ic_baseline_person_24"
+        android:drawablePadding="5dp"
+        android:ems="10"
+        android:hint="Address"
+        android:inputType="text"
+        android:padding="10dp"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        app:layout_constraintEnd_toEndOf="@+id/editTextFullname"
+        app:layout_constraintStart_toStartOf="@+id/editTextFullname"
+        app:layout_constraintTop_toBottomOf="@+id/editTextFullname" />
+
+    <EditText
+        android:id="@+id/editTextContactNo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/input_bg"
+        android:drawableLeft="@drawable/ic_baseline_security_24"
+        android:drawablePadding="5dp"
+        android:ems="10"
+        android:hint="Contact Number"
+        android:padding="10dp"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        app:layout_constraintEnd_toEndOf="@+id/editTextAddress"
+        app:layout_constraintStart_toStartOf="@+id/editTextAddress"
+        app:layout_constraintTop_toBottomOf="@+id/editTextAddress" />
+
+    <EditText
+        android:id="@+id/editTextFees"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/input_bg"
+        android:drawableLeft="@drawable/ic_baseline_security_24"
+        android:drawablePadding="5dp"
+        android:ems="10"
+        android:hint="Fees"
+        android:padding="10dp"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        app:layout_constraintEnd_toEndOf="@+id/editTextContactNo"
+        app:layout_constraintStart_toStartOf="@+id/editTextContactNo"
+        app:layout_constraintTop_toBottomOf="@+id/editTextContactNo" />
+
+    <Button
+        android:id="@+id/bookAppointmentBtn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="60dp"
+        android:text="Book appointment"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/editTextFees"
+        app:layout_constraintHorizontal_bias="0.65"
+        app:layout_constraintStart_toStartOf="@+id/editTextFees"
+        app:layout_constraintTop_toBottomOf="@+id/editTextFees"
+        app:layout_constraintVertical_bias="0.934" />
+
+    <TextView
+        android:id="@+id/textViewDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Select Date"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/btnEditDate"
+        app:layout_constraintEnd_toStartOf="@+id/textViewTime"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/editTextFees"
+        app:layout_constraintTop_toBottomOf="@+id/editTextFees"
+        app:layout_constraintVertical_bias="0.802"
+        app:layout_editor_absoluteX="57dp"
+        app:layout_editor_absoluteY="497dp" />
+
+    <Button
+        android:id="@+id/btnEditDate"
+        style="?android:spinnerStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:layout_marginBottom="36dp"
+        android:text="25/08/2024"
+        app:layout_constraintBottom_toTopOf="@+id/bookAppointementBtn"
+        app:layout_constraintEnd_toStartOf="@+id/btnEditTime"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/editTextFees"
+        app:layout_constraintTop_toBottomOf="@+id/editTextFees"
+        app:layout_editor_absoluteX="57dp"
+        app:layout_editor_absoluteY="525dp" />
+
+    <TextView
+        android:id="@+id/textViewTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Select Time"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/btnEditTime"
+        app:layout_constraintEnd_toEndOf="@+id/editTextFees"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/editTextFees"
+        app:layout_constraintTop_toBottomOf="@+id/editTextFees"
+        app:layout_constraintVertical_bias="0.802"
+        app:layout_editor_absoluteX="270dp"
+        app:layout_editor_absoluteY="497dp" />
+
+    <Button
+        android:id="@+id/btnEditTime"
+        style="?android:spinnerStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:layout_marginBottom="36dp"
+        android:text="08:10"
+        app:layout_constraintBottom_toTopOf="@+id/bookAppointementBtn"
+        app:layout_constraintEnd_toEndOf="@+id/editTextFees"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/editTextFees"
+        app:layout_constraintTop_toBottomOf="@+id/editTextFees"
+        app:layout_editor_absoluteX="230dp"
+        app:layout_editor_absoluteY="525dp" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
