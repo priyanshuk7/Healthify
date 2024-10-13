@@ -27,10 +27,10 @@ public class LabTestDeatilsActivity extends AppCompatActivity {
         setContentView(R.layout.activity_lab_test_deatils);
 
         tvPackageName= findViewById(R.id.textViewLDPackageName);
-        tvTotalCost = findViewById(R.id.textViewTotalCost);
+        tvTotalCost = findViewById(R.id.textViewTotalCostLD);
         edDetails = findViewById(R.id.editTextLD);
 
-        //edDetails.setKeyListener(null);
+        edDetails.setKeyListener(null);
 
         Intent intent=getIntent();
         tvPackageName.setText(intent.getStringExtra("text1"));
@@ -38,7 +38,8 @@ public class LabTestDeatilsActivity extends AppCompatActivity {
         tvTotalCost.setText("Total Cost : "+ intent.getStringExtra("text3")+ "/-");
 
 
-        btn= findViewById(R.id.buttonAddToCart);
+        btn= findViewById(R.id.buttonAddToCartLD);
+
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -53,7 +54,7 @@ public class LabTestDeatilsActivity extends AppCompatActivity {
                     Toast.makeText(getApplicationContext(),"Product Already Added",Toast.LENGTH_SHORT).show();
                 }else{
                     db.addCart(username,product,price,"lab");
-                    Toast.makeText(getApplicationContext(),"Product Already Added",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(),"Product Added to cart",Toast.LENGTH_SHORT).show();
                     startActivity(new Intent(LabTestDeatilsActivity.this, LabTestActivity.class));
                 }
             }

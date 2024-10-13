@@ -94,7 +94,7 @@ public class Database extends SQLiteOpenHelper {
         String str[] = new String[2];
         str[0] = username;
         str[1] = otype;
-        Cursor c = db.rawQuery("select * from cart where username = ? nad otype= ?", str);
+        Cursor c = db.rawQuery("select * from cart where username = ? and otype= ?", str);
         if(c.moveToFirst()){
             do{
                 String product = c.getString(1);

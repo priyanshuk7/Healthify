@@ -34,12 +34,12 @@ public class LabTestActivity extends AppCompatActivity {
                         "LDH lactate Dehydrogenase, serum\n"+
                         "Lipid Profile\n"+
                         "Liver Function Test",
-                    "Blood Glucose Fasting",
-                    "Covid-19 Antibody",
-                    "Thyroid Profile-Total (T3, T4 & TSH Ultra-sensitive)",
                     "Complete Hemogram\n"+
                             "CRP (C Reactive Protein) Quantitative, Serum\n"+
-                            "Iron Studies"
+                            "Iron Studies",
+                    "Blood sugar level check",
+                    "Thyroid Profile-Total (T3, T4 & TSH Ultra-sensitive)",
+                    "Blood Glucose Fasting"
             };
 
     HashMap<String , String >items;
@@ -78,9 +78,9 @@ public class LabTestActivity extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 Intent it= new Intent(LabTestActivity.this, LabTestDeatilsActivity.class);
-                it.putExtra("test1", packages[i][0]);
-                it.putExtra("test2", packageDetails[i]);
-                it.putExtra("test3", packages[i][4]);
+                it.putExtra("text1", packages[i][0]);
+                it.putExtra("text2", packageDetails[i]);
+                it.putExtra("text3", packages[i][4]);
                 startActivity(it);
             }
         });
